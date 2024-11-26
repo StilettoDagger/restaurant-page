@@ -21,6 +21,7 @@ const config = {
         open: true,
         host: 'localhost',
         port: 5000,
+        watchFiles: ['./src/template.html']
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -33,12 +34,12 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/i,
-                use: [stylesHandler, 'css-loader', 'postcss-loader', 'sass-loader'],
-            },
-            {
                 test: /\.css$/i,
                 use: [stylesHandler, 'css-loader', 'postcss-loader'],
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,

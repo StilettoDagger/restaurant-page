@@ -1,0 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=inter:100,400,600,900|playfair-display:400,400i,600,600i,900,900i);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
