@@ -3,3 +3,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-el button {
+    @apply hover:text-white cursor-pointer flex items-center gap-2;
+}
+
+.nav-el button span:last-child {
+    @apply underline-offset-4 sm:inline-block hidden;
+}
+
+.nav-el:hover button span:last-child, .active button span:last-child {
+    @apply underline;
+}
+
+.active {
+    @apply text-white;
+}
+
+.card {
+    @apply bg-stone-200 border border-black rounded-lg shadow-lg shadow-gray-400 hover:scale-105 transition hover:bg-red-900 hover:text-gray-200;
+}
+
+.card .card-heading {
+    @apply font-semibold font-playfair text-3xl p-2 border-b border-gray-400;
+}
+
+.card .card-content {
+    @apply p-2;
+}

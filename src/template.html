@@ -1,40 +1,45 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>The Shrouded Diner</title>
-	</head>
-	<body class="font-playfair text-stone-900">
-		<header>
-			<nav
-				class="z-20 flex bg-indigo-950 text-gray-300 p-4 font-inter fixed w-full sm:text-xl shadow-md">
-				<ul class="flex sm:gap-6 justify-between w-full sm:justify-start">
-					<li>
-						<button class="hover:text-white hover:underline underline-offset-4">
-							Home
-						</button>
-					</li>
-					<li>
-						<button class="hover:text-white hover:underline underline-offset-4">
-							Menu
-						</button>
-					</li>
-					<li>
-						<button class="hover:text-white hover:underline underline-offset-4">
-							About
-						</button>
-					</li>
-					<li>
-						<button class="hover:text-white hover:underline underline-offset-4">
-							Contact
-						</button>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<div id="content">
-				<!--Content will be rendered here using JavaScript-->
-		</div>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Shrouded Diner</title>
+    </head>
+    <body class="font-playfair text-stone-900">
+        <header>
+            <nav
+                class="z-20 flex items-center bg-indigo-950 text-gray-300 py-2 px-4 font-inter fixed w-full text-3xl sm:text-lg shadow-lg shadow-black">
+                <img class="h-14 pr-4 border-r border-gray-400 border-opacity-50" src="assets/shrouded-diner-logo.png" alt="Shrouded Diner Logo">
+                <ul class="flex pl-4 sm:gap-6 justify-center gap-10 w-full sm:justify-start">
+                    <li class="active nav-el">
+                        <button>
+                            <span class="icon-[fluent--home-16-regular]"></span>
+                            <span>Home</span>
+                        </button>
+                    </li>
+                    <li class="nav-el">
+                        <button>
+                            <span class="icon-[material-symbols--restaurant-menu]"></span>
+                            <span>Menu</span>
+                        </button>
+                    </li>
+                    <li class="nav-el">
+                        <button>
+                            <span class="icon-[mdi--about-variant]"></span>
+                            <span>About</span>
+                        </button>
+                    </li>
+                    <li class="nav-el">
+                        <button>
+                            <span class="icon-[grommet-icons--contact]"></span>
+                            <span>Contact</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="content">
+                <!--Content will be rendered here using JavaScript-->
+        </div>
+    </body>
 </html>

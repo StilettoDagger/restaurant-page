@@ -46,17 +46,14 @@ export default function renderInfo() {
 
     featureList.forEach((feat) => {
         const featCard = document.createElement("div");
-        featCard.className =
-            "bg-stone-200 border border-black rounded-lg shadow-lg shadow-gray-400 hover:scale-105 transition hover:bg-red-900 hover:text-gray-200";
-
+        featCard.classList.add("card");
         const cardHeading = document.createElement("h1");
-        cardHeading.className =
-            "font-semibold font-playfair text-3xl p-2 border-b border-gray-400";
+        cardHeading.classList.add("card-heading");
         cardHeading.textContent = feat.title;
         featCard.appendChild(cardHeading);
 
         const cardContent = document.createElement("div");
-        cardContent.className = "p-2";
+        cardContent.classList.add("card-content");
         cardContent.textContent = feat.content;
         featCard.appendChild(cardContent);
 
