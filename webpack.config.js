@@ -23,6 +23,7 @@ const config = {
         port: 5000,
         watchFiles: ['./src/template.html']
     },
+    devtool: 'eval-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             template: 'src/template.html',
