@@ -1,2 +1,7 @@
-export {default as renderHero} from './hero';
-export {default as renderInfo} from './info';
+import renderHero from "./hero";
+import renderInfo from "./info";
+
+export default function renderHome() {
+    renderHero();
+    renderInfo();
+}

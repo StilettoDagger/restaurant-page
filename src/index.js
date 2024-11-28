@@ -1,7 +1,6 @@
 import './css/styles.css';
-import {renderHero, renderInfo} from './modules/home';
+import renderHome from './modules/home';
 
-document.addEventListener("DOMContentLoaded", e => {
-    renderHero();
-    renderInfo();
-});
+// document.addEventListener("DOMContentLoaded", e => {
+//     renderHome();
+// });
