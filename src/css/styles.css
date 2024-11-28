@@ -37,17 +37,17 @@
 }
 
 .menu-category h2 {
-    @apply w-fit mx-auto bg-red-950 rounded-full shadow-md shadow-gray-900 px-4 py-2 my-4 text-center text-4xl font-semibold flex justify-center items-center gap-2;
+    @apply w-fit mx-auto bg-slate-950 rounded-full shadow-md shadow-gray-900 px-4 py-2 my-4 text-center text-4xl font-semibold flex justify-center items-center gap-2;
 }
 
 .menu-card {
-    @apply h-fit border border-black shadow-md shadow-gray-900 mt-4 px-4 pb-4 rounded-lg text-lg bg-slate-300 text-gray-950 font-inter;
+    @apply  mx-auto w-4/5 sm:w-1/2 lg:w-11/12 h-fit border border-black shadow-md shadow-gray-900 mt-4 p-4 pt-2 pb-8 rounded-lg text-lg bg-slate-300 text-gray-950 font-inter;
 }
 
 .menu-card h3 {
-    @apply border-b border-black pb-2 text-center text-xl font-semibold font-playfair;
+    @apply mb-4 border-b border-black pb-2 text-center text-3xl font-semibold font-playfair;
 }
 
 .menu-container {
-    @apply grid grid-cols-1 lg:h-[60vh] lg:overflow-y-auto px-4 border-t border-gray-900 border-opacity-20
+    @apply grid grid-cols-1 lg:h-[60vh] lg:overflow-y-auto px-4 border-t border-gray-900 border-opacity-40
 }
