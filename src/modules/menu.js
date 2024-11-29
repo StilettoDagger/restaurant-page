@@ -5,7 +5,7 @@ import restaurantMenu from "./restaurantMenu";
 export default function renderMenu() {
     const menuSection = document.createElement("section");
 
-    menuSection.className = "bg-gradient-to-b from-red-950 from-5% to-red-500 to-100% min-h-screen text-gray-100 text-xl block pt-16";
+    menuSection.className = "bg-red-950 lg:bg-gradient-to-b from-gray-950 from-10% to-red-950 lg:to-60% min-h-screen text-gray-100 text-xl block pt-16";
     menuSection.id = "menu";
 
     const imgContainer = document.createElement("div");
@@ -26,7 +26,7 @@ export default function renderMenu() {
     menuSection.appendChild(imgContainer);
 
     const menuGrid = document.createElement("div");
-    menuGrid.className = "grid grid-cols-1 lg:grid-cols-3";
+    menuGrid.className = "lg:h-[92vh] grid grid-cols-1 lg:grid-cols-3";
 
     for (const category of restaurantMenu) {
         const catContainer = document.createElement("div");

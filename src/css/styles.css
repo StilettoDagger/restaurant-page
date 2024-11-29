@@ -21,23 +21,23 @@
 }
 
 .card {
-    @apply bg-stone-200 border border-black rounded-lg shadow-lg shadow-gray-400 hover:scale-105 transition hover:bg-red-900 hover:text-gray-200;
+    @apply font-playfair bg-stone-300 border-2 border-black rounded-lg shadow-lg shadow-gray-600 hover:scale-105 transition hover:bg-red-900 hover:text-gray-200;
 }
 
 .card .card-heading {
-    @apply font-semibold font-playfair text-3xl p-2 border-b border-gray-400;
+    @apply font-semibold text-center text-3xl p-2 border-b border-gray-400;
 }
 
 .card .card-content {
-    @apply p-2;
+    @apply p-2 mt-2;
 }
 
 .menu-category {
-    @apply border-r-2 border-gray-900 last:border-none
+    @apply lg:h-[80vh];
 }
 
 .menu-category h2 {
-    @apply w-fit mx-auto bg-slate-950 rounded-full shadow-md shadow-gray-900 px-4 py-2 my-4 text-center text-4xl font-semibold flex justify-center items-center gap-2;
+    @apply w-fit mx-auto bg-slate-900 rounded-xl border-gray-300 shadow-lg shadow-black border-2 px-4 py-2 my-4 text-center text-4xl font-semibold flex justify-center items-center gap-2;
 }
 
 .menu-card {
@@ -49,5 +49,5 @@
 }
 
 .menu-container {
-    @apply grid grid-cols-1 lg:h-[60vh] lg:overflow-y-auto px-4 border-t border-gray-900 border-opacity-40
+    @apply lg:h-full grid grid-cols-1 lg:overflow-y-auto px-4 border-opacity-50 border-t-gray-500 border-t-2 border-r-gray-500 border-r-2
 }
