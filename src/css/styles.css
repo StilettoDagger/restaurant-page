@@ -21,7 +21,7 @@
 }
 
 .card {
-    @apply font-playfair bg-stone-300 border-2 border-black rounded-lg shadow-lg shadow-gray-600 hover:scale-105 transition hover:bg-red-900 hover:text-gray-200;
+    @apply font-playfair bg-stone-200 border-2 border-black rounded-lg shadow-lg shadow-gray-600 hover:scale-105 transition hover:bg-red-900 hover:text-gray-200;
 }
 
 .card .card-heading {
@@ -37,7 +37,7 @@
 }
 
 .menu-category h2 {
-    @apply w-fit mx-auto bg-slate-900 rounded-xl border-gray-300 shadow-lg shadow-black border-2 px-4 py-2 my-4 text-center text-4xl font-semibold flex justify-center items-center gap-2;
+    @apply w-fit mx-auto rounded-xl border-gray-300 shadow-lg shadow-black border-2 px-4 py-2 my-4 text-center text-4xl font-semibold flex justify-center items-center gap-2;
 }
 
 .menu-card {
@@ -50,4 +50,16 @@
 
 .menu-container {
     @apply lg:h-full grid grid-cols-1 lg:overflow-y-auto px-4 border-opacity-50 border-t-gray-500 border-t-2 border-r-gray-500 border-r-2
+}
+
+.appetizers {
+    @apply bg-teal-800
+}
+
+.main-course {
+    @apply bg-cyan-900
+}
+
+.desserts {
+    @apply bg-rose-900
 }

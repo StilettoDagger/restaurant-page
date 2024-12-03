@@ -5,7 +5,7 @@ import restaurantMenu from "./restaurantMenu";
 export default function renderMenu() {
     const menuSection = document.createElement("section");
 
-    menuSection.className = "bg-red-950 lg:bg-gradient-to-b from-gray-950 from-10% to-red-950 lg:to-60% min-h-screen text-gray-100 text-xl block pt-16";
+    menuSection.className = "bg-zinc-800 min-h-screen text-gray-100 text-xl block pt-16";
     menuSection.id = "menu";
 
     const imgContainer = document.createElement("div");
@@ -34,6 +34,7 @@ export default function renderMenu() {
 
         const catHeading = document.createElement("h2");
         catHeading.innerHTML = `<span class="${category.icon}"></span>${category.category}`;
+        catHeading.classList.add(category.category.toLocaleLowerCase().split(" ").join("-"))
         catContainer.appendChild(catHeading);
 
         const menuItemsContainer = document.createElement("div");

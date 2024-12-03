@@ -36,7 +36,7 @@ export default [
         ],
     },
     {
-        category: "Dessert",
+        category: "Desserts",
         icon: "icon-[mdi--cupcake]",
         categoryItems: [
             {
