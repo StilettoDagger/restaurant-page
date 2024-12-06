@@ -5,7 +5,7 @@ import restaurantMenu from "./restaurantMenu";
 export default function renderMenu() {
     const menuSection = document.createElement("section");
 
-    menuSection.className = "bg-zinc-800 min-h-screen text-gray-100 text-xl block pt-16";
+    menuSection.className = "bg-zinc-950 min-h-screen text-gray-100 text-xl block pt-16";
     menuSection.id = "menu";
 
     const imgContainer = document.createElement("div");

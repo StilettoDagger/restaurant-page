@@ -65,7 +65,7 @@
 }
 
 .about-card {
-    @apply w-11/12 sm:w-3/4 flex flex-col lg:flex-row bg-zinc-800 text-gray-200 rounded-xl lg:h-min my-24;
+    @apply w-11/12 sm:w-3/4 flex flex-col lg:flex-row bg-zinc-800 text-gray-200 rounded-xl lg:h-min my-24 border;
 }
 
 .about-img {
@@ -77,7 +77,7 @@
 }
 
 .about-text-container > h2 {
-    @apply text-center lg:text-5xl text-3xl font-bold mb-4 pb-4 border-b p-4;
+    @apply bg-zinc-700 underline underline-offset-8 lg:rounded-tr-xl text-center lg:text-5xl text-3xl font-bold mb-4 pb-4 border-b p-4 border-t lg:border-t-0;
 }
 
 .about-text-container > p {

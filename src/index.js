@@ -1,4 +1,5 @@
 import './css/styles.css';
+import renderAbout from './modules/about';
 import renderHome from './modules/home';
 import renderMenu from './modules/menu';
 
@@ -10,7 +11,7 @@ navButtons.forEach(button => {
     button.addEventListener("click", handleNavButtonClick);
 })
 
-// renderHome();
+renderHome();
 
 function handleNavButtonClick(e) {
     activeNav.classList.toggle("active");
@@ -30,6 +31,8 @@ function handleNavButtonClick(e) {
         case "menu":
             renderMenu();
             break;
+        case "about":
+            renderAbout();
         default:
             return;
     }
