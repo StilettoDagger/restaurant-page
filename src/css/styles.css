@@ -63,3 +63,24 @@
 .desserts {
     @apply bg-rose-900
 }
+
+.about-card {
+    @apply w-11/12 sm:w-3/4 flex flex-col lg:flex-row bg-zinc-800 text-gray-200 rounded-xl lg:h-min my-24;
+}
+
+.about-img {
+    @apply lg:h-full h-[150px] w-full object-cover lg:rounded-l-xl lg:rounded-tr-none rounded-t-xl grayscale;
+}
+
+.about-text-container {
+    @apply flex-[2] flex flex-col justify-center;
+}
+
+.about-text-container > h2 {
+    @apply text-center lg:text-5xl text-3xl font-bold mb-4 pb-4 border-b p-4;
+}
+
+.about-text-container > p {
+    @apply p-4 lg:text-xl text-lg;
+}
+
