@@ -9,6 +9,9 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
         playfair: ['Playfair Display', 'serif']
       },
+      backgroundImage: {
+        'reception': "url('../assets/reception.jpg')",
+      }
     },
   },
   plugins: [

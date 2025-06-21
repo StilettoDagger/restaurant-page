@@ -11,7 +11,7 @@ navButtons.forEach(button => {
     button.addEventListener("click", handleNavButtonClick);
 })
 
-renderHome();
+// renderHome();
 
 function handleNavButtonClick(e) {
     activeNav.classList.toggle("active");
