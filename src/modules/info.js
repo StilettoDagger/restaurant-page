@@ -31,7 +31,7 @@ export default function renderInfo() {
 
     infoSection.id = "info";
     infoSection.className =
-        "min-h-[60vh] bg-indigo-950 lg:bg-gradient-to-b from-indigo-950 to-gray-200 p-6";
+        "min-h-[60vh] bg-indigo-950 lg:bg-linear-to-b from-indigo-950 to-gray-200 p-6";
 
     const sectionHeading = document.createElement("h1");
     sectionHeading.className =

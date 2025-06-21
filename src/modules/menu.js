@@ -26,7 +26,7 @@ export default function renderMenu() {
     menuSection.appendChild(imgContainer);
 
     const menuGrid = document.createElement("div");
-    menuGrid.className = "lg:h-[92vh] grid grid-cols-1 lg:grid-cols-3";
+    menuGrid.className = "lg:h-[92vh] grid grid-cols-1 lg:grid-cols-3 bg-zinc-900";
 
     for (const category of restaurantMenu) {
         const catContainer = document.createElement("div");

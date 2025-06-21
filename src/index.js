@@ -2,6 +2,7 @@ import './css/styles.css';
 import renderAbout from './modules/about';
 import renderHome from './modules/home';
 import renderMenu from './modules/menu';
+import renderContact from './modules/contact';
 
 const navButtons = document.querySelectorAll(".nav-el button");
 let activeNav = document.querySelector("li.nav-el:first-child")
@@ -11,7 +12,7 @@ navButtons.forEach(button => {
     button.addEventListener("click", handleNavButtonClick);
 })
 
-// renderHome();
+renderHome();
 
 function handleNavButtonClick(e) {
     activeNav.classList.toggle("active");
@@ -33,6 +34,10 @@ function handleNavButtonClick(e) {
             break;
         case "about":
             renderAbout();
+            break;
+        case "contact":
+            renderContact();
+            break;
         default:
             return;
     }

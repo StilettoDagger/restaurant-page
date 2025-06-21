@@ -1,8 +1,13 @@
 @import url(https://fonts.bunny.net/css?family=inter:100,400,600,900|playfair-display:400,400i,600,600i,900,900i);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "@iconify/tailwind4";
+
+@theme {
+  --font-playfair: 'Playfair Display', serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
 
 .nav-el button {
     @apply hover:text-white cursor-pointer flex items-center gap-2;
@@ -49,7 +54,7 @@
 }
 
 .menu-container {
-    @apply lg:h-full grid grid-cols-1 lg:overflow-y-auto px-4 border-opacity-50 border-t-gray-500 border-t-2 border-r-gray-500 border-r-2
+    @apply lg:h-full grid grid-cols-1 lg:overflow-y-auto px-4 border-black/50 border-t-gray-500 border-t-2 border-r-gray-500 border-r-2
 }
 
 .appetizers {
@@ -73,7 +78,7 @@
 }
 
 .about-text-container {
-    @apply flex-[2] flex flex-col justify-center;
+    @apply flex-2 flex flex-col justify-center;
 }
 
 .about-text-container > h2 {
@@ -85,29 +90,25 @@
 }
 
 .contact-section {
-    @apply h-screen bg-reception bg-cover bg-center bg-black/80 bg-blend-multiply text-gray-200;
+    @apply h-screen bg-[url(../assets/reception.jpg)] bg-cover bg-center bg-black/85 bg-blend-multiply text-gray-200;
 }
 
 .contact-section > h2 {
-    @apply pt-20 text-gray-200 text-5xl font-semibold text-center underline;
+    @apply pt-20 text-gray-200 text-5xl md:text-6xl font-semibold text-center underline;
 }
 
-.contact-form {
-    @apply backdrop-blur-md text-xl max-w-md mx-auto mt-10 p-8 bg-gray-800/50 rounded-lg shadow-lg;
+.reservation-form {
+    @apply flex flex-col backdrop-blur-sm text-xl font-inter md:text-2xl max-w-md md:max-w-xl mx-auto mt-10 p-8 bg-gray-800/50 rounded-lg shadow-lg;
 }
 
-.contact-form > div {
-    @apply mb-4;
-}
-
-.contact-form label {
+.reservation-form label {
     @apply block text-gray-300 mb-2;
 }
 
-.contact-form input {
-    @apply w-full p-2 rounded bg-gray-700 text-gray-200;
+.reservation-form input {
+    @apply w-full p-2 rounded bg-gray-700 text-gray-200 user-invalid:border-red-500 invalid:border-2 user-invalid:bg-red-900;
 }
 
-.contact-form button[type="submit"] {
-    @apply w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500;
+.reservation-form button[type="submit"] {
+    @apply mt-4 w-1/2 mx-auto hover:cursor-pointer bg-amber-900 hover:bg-amber-950 text-white transition-colors duration-100 py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-950;
 }

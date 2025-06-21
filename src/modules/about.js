@@ -31,7 +31,7 @@ export default function renderAbout() {
 	const aboutSection = document.createElement("section");
 	aboutSection.id = "about";
 	aboutSection.className =
-		"min-h-screen lg:h-screen bg-neutral-950 flex items-center justify-center";
+		"min-h-screen lg:h-screen bg-neutral-900 flex items-center justify-center";
 
 	const aboutCard = document.createElement("div");
 	aboutCard.classList.add("about-card");
