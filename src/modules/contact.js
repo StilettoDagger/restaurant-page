@@ -42,7 +42,10 @@ export default function renderContact() {
     contactInfo.id = "contact-info";
     contactInfo.innerHTML = `
     <h2>Contact Us</h2>
-    <form id="contact-form"  noValidate>
+    <form id="contact-form" noValidate>
+        <div>
+            <p class="mb-8 text-center">For any inquiries, please fill out the form below:</p>
+        </div>
         <div>
             <label for="contact-email">Email:</label>
             <input type="email" id="contact-email" name="contact-email" required>
