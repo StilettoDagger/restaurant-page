@@ -4,15 +4,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "npm run clean",
+    "prebuild": "echo 'Building the project...'",
     "postbuild": "npm run deploy",
-    "build": "webpack --mode=production --node-env=production",
+    "build": "webpack --config webpack.prod.js",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve",
-    "deploy": "git add dist -f && git commit -m 'Deployment commit' && git subtree push --prefix dist origin gh-pages",
-    "clean": "rm -rf dist"
+    "start": "webpack serve --open --config webpack.dev.js",
+    "deploy": "git add dist -f && git commit -m 'Deployment commit' && git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +38,7 @@
     "webpack": "^5.96.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.1.0",
+    "webpack-merge": "^6.0.1",
     "workbox-webpack-plugin": "^7.3.0"
   }
 }
