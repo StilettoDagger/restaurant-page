@@ -89,26 +89,50 @@
     @apply p-4 lg:text-xl text-lg;
 }
 
-.contact-section {
-    @apply h-screen bg-[url(../assets/reception.jpg)] bg-cover bg-center bg-black/85 bg-blend-multiply text-gray-200;
+#reservation-info {
+    @apply items-center flex flex-col h-screen bg-[url(../assets/reception.jpg)] bg-cover bg-center bg-black/85 bg-blend-multiply text-gray-200;
 }
 
-.contact-section > h2 {
+#reservation-info > h2 {
     @apply pt-20 text-gray-200 text-5xl md:text-6xl font-semibold text-center underline;
 }
 
-.reservation-form {
-    @apply flex flex-col backdrop-blur-sm text-xl font-inter md:text-2xl max-w-md md:max-w-xl mx-auto mt-10 p-8 bg-gray-800/50 rounded-lg shadow-lg;
+#reservation-form {
+    @apply m-auto w-full lg:w-1/2 flex flex-col backdrop-blur-sm text-xl font-inter md:text-2xl max-w-md md:max-w-xl p-8 bg-gray-900/70 rounded-lg shadow-2xl;
 }
 
-.reservation-form label {
+#reservation-form label {
     @apply block text-gray-300 mb-2;
 }
 
-.reservation-form input {
+#reservation-form input {
     @apply w-full p-2 rounded bg-gray-700 text-gray-200 user-invalid:border-red-500 invalid:border-2 user-invalid:bg-red-900;
 }
 
-.reservation-form button[type="submit"] {
-    @apply mt-4 w-1/2 mx-auto hover:cursor-pointer bg-amber-900 hover:bg-amber-950 text-white transition-colors duration-100 py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-950;
+#reservation-form button[type="submit"] {
+    @apply border-2 mt-4 w-1/2 mx-auto hover:cursor-pointer bg-amber-900 hover:bg-amber-950 text-white transition-colors duration-100 py-2 px-4 rounded-full focus:outline-none;
+}
+
+#contact-info {
+    @apply flex flex-col border-t-2 border-t-gray-300 border-dashed h-screen bg-[url(../assets/contact.jpg)] bg-cover bg-center bg-black/85 bg-blend-multiply text-gray-200;
+}
+
+#contact-info > h2 {
+    @apply pt-20 text-gray-200 text-5xl md:text-6xl font-semibold text-center underline;
+}
+
+#contact-form {
+    @apply w-full lg:w-1/2 m-auto flex flex-col backdrop-blur-sm text-xl font-inter md:text-2xl max-w-md md:max-w-xl p-8 bg-gray-900/70 rounded-lg shadow-2xl;
+}
+
+#contact-form label {
+    @apply block text-gray-300 mb-2;
+}
+
+#contact-form input, #contact-form textarea {
+    @apply w-full p-2 rounded bg-gray-700 text-gray-200 user-invalid:border-red-500 invalid:border-2 user-invalid:bg-red-900;
+}
+
+#contact-form button[type="submit"] {
+    @apply mt-4 w-1/2 mx-auto hover:cursor-pointer border-2 transition-colors duration-100 bg-stone-950 hover:bg-stone-900 text-white py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-500;
 }

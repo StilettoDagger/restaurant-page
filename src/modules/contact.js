@@ -4,11 +4,13 @@ export default function renderContact() {
     contactSection.id = "contact";
     contactSection.className = "contact-section";
     
-    const contactHeader = document.createElement("h2");
-    contactHeader.textContent = "Reserve a Table";
-    contactSection.appendChild(contactHeader);
+    const reservationDiv = document.createElement("div");
+    reservationDiv.id = "reservation-info";
+    const reservationHeader = document.createElement("h2");
+    reservationHeader.textContent = "Reserve a Table";
+    reservationDiv.appendChild(reservationHeader);
     const reservationForm = document.createElement("form");
-    reservationForm.className = "reservation-form";
+    reservationForm.id = "reservation-form";
     reservationForm.noValidate = true;
     reservationForm.innerHTML = `
     <div>
@@ -33,12 +35,34 @@ export default function renderContact() {
     </div>
     <button type="submit">Reserve</button>
     `;
-    contactSection.appendChild(reservationForm);
+    reservationDiv.appendChild(reservationForm);
+    contactSection.appendChild(reservationDiv);
+
+    const contactInfo = document.createElement("div");
+    contactInfo.id = "contact-info";
+    contactInfo.innerHTML = `
+    <h2>Contact Us</h2>
+    <form id="contact-form"  noValidate>
+        <div>
+            <label for="contact-email">Email:</label>
+            <input type="email" id="contact-email" name="contact-email" required>
+            <p class="error invisible text-red-500 text-sm">Please enter a valid email.</p>
+        </div>
+        <div>
+            <label for="contact-message">Message:</label>
+            <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
+            <p class="error invisible text-red-500 text-sm">Please enter a message.</p>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+    `;
+
+    contactSection.appendChild(contactInfo);
 
     content.appendChild(contactSection);
 
-    const inputFields = reservationForm.querySelectorAll("input");
-    inputFields.forEach(input => {
+    const reservationInputFields = reservationForm.querySelectorAll("input");
+    reservationInputFields.forEach(input => {
         input.addEventListener("change", () => {
             if (input.validity.valid) {
                 input.nextElementSibling.classList.add("invisible");
@@ -71,4 +95,37 @@ export default function renderContact() {
             });
         }       
     });
+
+    const contactForm = contactInfo.querySelector("#contact-form");
+
+    contactForm.querySelectorAll("input, textarea").forEach(input => {
+        input.addEventListener("change", () => {
+            if (input.validity.valid) {
+                input.nextElementSibling.classList.add("invisible");
+            } else {
+                input.nextElementSibling.classList.remove("invisible");
+            }
+        });
+        input.addEventListener("input", () => {
+            if (input.validity.valid) {
+                input.nextElementSibling.classList.add("invisible");
+            }
+        });
+    });
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (contactForm.checkValidity()) {
+            const contactEmail = document.getElementById("contact-email").value;
+            const contactMessage = document.getElementById("contact-message").value;
+            alert(`Message sent successfully! We will get back to you at ${contactEmail}.`);
+            contactForm.reset();
+        } else {
+            const invalidFields = contactForm.querySelectorAll(":invalid");
+            invalidFields.forEach(field => {
+                field.nextElementSibling.classList.remove("invisible");
+            });
+        }
+    }
+    );
 }
