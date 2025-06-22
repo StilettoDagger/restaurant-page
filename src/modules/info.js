@@ -31,17 +31,17 @@ export default function renderInfo() {
 
     infoSection.id = "info";
     infoSection.className =
-        "min-h-[60vh] bg-indigo-950 lg:bg-linear-to-b from-indigo-950 to-gray-200 p-6";
+        "flex flex-col md:h-screen bg-indigo-950 lg:bg-linear-to-b from-indigo-950 to-gray-200 p-6";
 
     const sectionHeading = document.createElement("h1");
     sectionHeading.className =
-        "text-6xl text-center text-gray-100 font-semibold pb-8 border-b-2 border-b-gray-300 border-opacity-40";
+        "my-12 text-6xl text-center text-gray-100 font-semibold pb-8 border-b-2 border-b-gray-300 border-opacity-40";
     sectionHeading.textContent = "What we offer";
     infoSection.appendChild(sectionHeading);
 
     const gridContainer = document.createElement("div");
     gridContainer.className =
-        "text-xl font-inter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-10 content-center";
+        "m-auto xl:w-1/2 text-xl font-inter grid grid-cols-1 md:grid-cols-2 gap-10 content-center";
     infoSection.appendChild(gridContainer);
 
     featureList.forEach((feat) => {
